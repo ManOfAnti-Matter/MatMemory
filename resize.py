@@ -17,6 +17,8 @@ for item in dirs:
     im = Image.open(path + "\\" + item)
     f, e = os.path.splitext(item)
     print(f)
-    if im.size[0] > 250 or im.size[1] > 150: imResize = resize_image(im, (250, 150))
-    else: imResize = im
-    imResize.save(f + ' resized.png', 'PNG', quality=90)
+    if im.size[0] > 216 or im.size[1] > 116:
+        imResize = resize_image(im, (216, 116))
+    else:
+        imResize = im
+    imResize.save(f + ' resized.png', 'PNG', quality=200)
